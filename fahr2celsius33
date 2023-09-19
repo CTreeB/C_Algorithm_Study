@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int celsius1000
+	
+	int left 
+	int right 
+
+	return 0;
+}
