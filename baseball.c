@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<iostream>
 
 int main(void)
 {
 	int question[3];
-	int strike;
+	int strike = 0;
 	int ball;
 	int count = 0;
 
@@ -30,7 +31,7 @@ int main(void)
 
 		// 사용자로부터 3개의 숫자를 입력 받음
 		printf("Enter your answer: ");
-		scanf("%d %d %d", &answer[0], &answer[1], &answer[2]);
+		std::cin >> answer[0] >> answer[1] >> answer[2];
 
 		// 입력한 숫자와 정답을 비교하여 strike와 ball을 계산
 		for (int i = 0; i < 3; ++i) {
@@ -38,7 +39,8 @@ int main(void)
 				if (question[i] == answer[j]) {
 					if (i == j) {
 						strike++;  // 같은 위치에 같은 숫자가 있으면 strike 증가
-					} else {
+					}
+					else {
 						ball++;  // 다른 위치에 같은 숫자가 있으면 ball 증가
 					}
 				}
@@ -55,4 +57,5 @@ int main(void)
 
 	return 0;
 }
+
 
